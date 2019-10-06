@@ -44,15 +44,15 @@ namespace Laba1
                     if (d < 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("D=" + d + ", нет решений");
+                        Console.WriteLine("D = " + d + ", нет решений");
                     }
                     else if (d == 0)
-                        Console.WriteLine("D=0, x=0");
+                        Console.WriteLine("D = 0, x = 0");
                     else
                     {
                         x1 = Math.Sqrt(d) / (2 * b);
                         x2 = -Math.Sqrt(d) / (2 * b);
-                        Console.WriteLine("D=" + d + ", x1 = " + x1 + ", x2 = " + x2);
+                        Console.WriteLine("D = " + d + ", x1 = " + x1 + ", x2 = " + x2);
                     }
                 }
             }
@@ -62,22 +62,22 @@ namespace Laba1
                 if (d < 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("D=" + d + ", нет решений.");
+                    Console.WriteLine("D = " + d + ", нет решений.");
                 }
                 else if (d == 0)
                 {
                     if (-b / (2 * a) < 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("D=0, нет решений.");
+                        Console.WriteLine("D = 0, нет решений.");
                     }
                     else if (-b / (2 * a) == 0)
-                        Console.WriteLine("D=0, x = 0");
+                        Console.WriteLine("D = 0, x = 0");
                     else
                     {
                         x1 = Math.Sqrt(-b / (2 * a));
                         x2 = -Math.Sqrt(-b / (2 * a));
-                        Console.WriteLine("D=0, x1 = " + x1 + ", x2 = " + x2);
+                        Console.WriteLine("D = 0, x1 = " + x1 + ", x2 = " + x2);
                     }
                 }
                 else
@@ -85,7 +85,6 @@ namespace Laba1
                     double square1 = (-b + Math.Sqrt(d)) / (2 * a), square2 = (-b - Math.Sqrt(d)) / (2 * a);
                     if (square1 == 0)
                     {
-                        x1 = 0;
                         Console.Write("D = " + d + ", x1 = 0");
                     }
                     else if (square1 > 0)
@@ -96,7 +95,6 @@ namespace Laba1
                     }
                     if (square2 == 0)
                     {
-                        x3 = 0;
                         if (square1 < 0)
                             Console.WriteLine("D = " + d + ", x1 = 0");
                         else if (square1 == 0)
