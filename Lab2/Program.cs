@@ -4,8 +4,8 @@ namespace Lab2
 {
     abstract class Figure
     {
-        public virtual double GetArea() 
-        { 
+        public virtual double GetArea()
+        {
             return 0;
         }
     }
@@ -33,7 +33,7 @@ namespace Lab2
     }
     class Square : Rectangle, IPrint
     {
-        public Square(double length) : base(length, length) {}
+        public Square(double length) : base(length, length) { }
         public override string ToString()
         {
             return "Length = " + Width + ", area = " + GetArea();
@@ -67,7 +67,7 @@ namespace Lab2
     {
         public static void Main()
         {
-            
+
         }
     }
     interface IPrint
