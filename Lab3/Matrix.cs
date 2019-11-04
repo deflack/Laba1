@@ -97,9 +97,10 @@ namespace Lab3
             //большого количества обычных строк
 
             StringBuilder b = new StringBuilder();
-            for (int j = 0; j < this.maxY; j++)
+            for (int k = 0; k < this.maxZ; k++)
             {
-                for (int k = 0; k < this.maxZ; k++)
+                b.Append("Z = " + k.ToString() + ":\n");
+                for (int j = 0; j < this.maxY; j++)
                 {
                     b.Append("[");
                     for (int i = 0; i < this.maxX; i++)
@@ -108,8 +109,8 @@ namespace Lab3
                         b.Append(this[i, j, k].ToString());
                     }
                     b.Append("] ");
+                    b.Append("\n");
                 }
-                b.Append("\n");
             }
             return b.ToString();
         }
