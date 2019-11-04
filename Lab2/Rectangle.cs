@@ -2,7 +2,7 @@
 
 namespace Lab2
 {
-    class Rectangle : Figure, IPrint
+    public class Rectangle : Figure, IPrint
     {
         public double Width { get; set; }
         public double Height { get; set; }
@@ -17,7 +17,7 @@ namespace Lab2
         }
         public override string ToString()
         {
-            return "Width = " + Width + ", height = " + Height + ", area = " + GetArea();
+            return "Прямоугольник: ширина = " + Width + ", высота = " + Height + ", площадь = " + GetArea();
         }
         public void Print()
         {

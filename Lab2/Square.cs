@@ -2,12 +2,12 @@
 
 namespace Lab2
 {
-    class Square : Rectangle, IPrint
+    public class Square : Rectangle, IPrint
     {
         public Square(double length) : base(length, length) { }
         public override string ToString()
         {
-            return "Length = " + Width + ", area = " + GetArea();
+            return "Квадрат: длина = " + Width + ", площадь = " + GetArea();
         }
         public void Print()
         {
