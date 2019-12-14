@@ -44,20 +44,30 @@ namespace Lab4
             if (list.Count == 0)
                 MessageBox.Show("Файл не прочитан либо не содержит текст.");
             else if (textBox1.Text.Length == 0)
-                MessageBox.Show("Введите слово, которое хотите найти.");
+                MessageBox.Show("Введите слово для сравнения.");
+            else if (textBox2.Text.Length == 0)
+                MessageBox.Show("Введите максимальное расстояние.");
             else
             {
-                listBox1.BeginUpdate();
-                listBox1.Items.Clear();
-                sw.Reset();
-                sw.Start();
-                foreach(string item in list)
+                if (int.TryParse(textBox2.Text, out int max))
                 {
-                    if (item.Contains(textBox1.Text)) listBox1.Items.Add(item);
+                    listBox1.BeginUpdate();
+                    listBox1.Items.Clear();
+                    sw.Reset();
+                    sw.Start();
+                    foreach (string item in list)
+                    {
+                        if (Lab5.Distance.Levenshtein(textBox1.Text, item) <= max)
+                            listBox1.Items.Add(item);
+                    }
+                    sw.Stop();
+                    listBox1.EndUpdate();
+                    label2.Text = "Время определения слов, мс: " + sw.ElapsedMilliseconds.ToString();
                 }
-                sw.Stop();
-                listBox1.EndUpdate();
-                label2.Text = "Время поиска слов, мс: " + sw.ElapsedMilliseconds.ToString();
+                else
+                {
+                    MessageBox.Show("Ошибка ввода максимального расстояния.");
+                }
             }
         }
     }
