@@ -2,9 +2,9 @@
 
 namespace Lab5
 {
-    public class Distance
+    public static class Distance
     {
-        public int Levenshtein(string first, string second)
+        public static int Levenshtein(string first, string second)
         {
             int n = first.Length + 1;
             int m = second.Length + 1;
