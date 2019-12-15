@@ -135,7 +135,7 @@ namespace Dz
                 b.AppendLine("</tr>");
 
                 b.AppendLine("<tr>"); 
-                b.AppendLine("<td>Максимальное расстояние для нечеткого поиска</td>"); 
+                b.AppendLine("<td>Максимальное расстояние для поиска</td>"); 
                 b.AppendLine("<td>" + this.textBox2.Text + "</td>"); 
                 b.AppendLine("</tr>");
 
